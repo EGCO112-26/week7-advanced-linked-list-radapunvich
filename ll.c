@@ -92,7 +92,7 @@ void printList(LLPtr sPtr)
 
     LLPtr temp = sPtr;
     while (temp != NULL) {
-        printf("%d %s --> ", temp->id, temp->name);
+        printf("%d %s -->", temp->id, temp->name);
         temp = temp->nextPtr;
     }
     printf("NULL\n");
@@ -111,7 +111,7 @@ void printBackward(LLPtr sPtr)
     
 
     while (sPtr != NULL) {
-        printf("%d %s --> ", sPtr->id, sPtr->name);
+        printf("%d %s -->", sPtr->id, sPtr->name);
         sPtr = sPtr->pPtr;
     }
     printf("NULL\n");
@@ -125,7 +125,7 @@ void freeList(LLPtr *sPtr)
         temp = *sPtr;
         printf("delete %d\n", temp->id);
         *sPtr = (*sPtr)->nextPtr;   
-        
+
         free(temp);
     }
 }
